@@ -1,0 +1,17 @@
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();      
+        sc.nextLine();            
+        String s = sc.nextLine();  
+
+        if (s.length() >= 5) {
+            String result = "" + s.charAt(1) + s.charAt(2) + s.charAt(3) + s.charAt(4) + s.charAt(0);
+            System.out.println(result);
+        } else {
+            System.out.println(s);
+        }
+    }
+}
