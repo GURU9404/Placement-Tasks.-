@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+  
+        char c = sc.nextLine().charAt(0);
+
+        String G = sc.nextLine();
+
+        boolean found = false; 
+
+        for (int i = 0; i < G.length(); i++) {
+            char n = G.charAt(i);
+            if (n == c) {
+                found = true;
+                break;
+            }
+        }
+
+        if (found) {
+            System.out.println("Present");
+        } else {
+            System.out.println("Not Present");
+        }
+    }
+}
