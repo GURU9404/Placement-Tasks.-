@@ -1,0 +1,47 @@
+import java.util.*;
+
+public class RotateSecondHalf {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        
+        int size = scanner.nextInt();
+
+     
+        int[] arr = new int[size];
+        for (int i = 0; i < size; i++) {
+            arr[i] = scanner.nextInt();
+        }
+
+        
+        int rotations = scanner.nextInt();
+
+        int mid = size / 2;
+
+        
+        int secondHalfLength = size - mid;
+
+        
+        int n = (secondHalfLength == 0) ? 0 : rotations % secondHalfLength;
+
+    
+        if (n > 0) {
+        
+            int[] rotated = new int[secondHalfLength];
+
+            for (int i = 0; i < secondHalfLength; i++) {
+                rotated[(i + n) % secondHalfLength] = arr[mid + i];
+            }
+
+        
+            for (int i = 0; i < secondHalfLength; i++) {
+                arr[mid + i] = rotated[i];
+            }
+        }
+
+
+        for (int i = 0; i < size; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
