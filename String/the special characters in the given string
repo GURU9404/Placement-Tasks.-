@@ -1,0 +1,39 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+    
+        Scanner sc =new Scanner(System.in);
+        String n =sc.nextLine();
+        int u=0;
+        int k=0,j=0,o=0;
+        for(int i=0;i<n.length();i++){
+            char e =n.charAt(i);
+            {
+        if(e>=65&&e<=90){
+         
+            u++;
+        }
+        else if(e>=97&&e<=122){
+            
+            j++;
+        }
+        else if(e>=48&&e<=57){
+           
+            o++;
+        }
+        else
+           
+        k++;
+                
+            }
+        }
+        System.out.println(k);
+    
+    }
+}
